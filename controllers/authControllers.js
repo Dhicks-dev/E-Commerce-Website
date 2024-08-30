@@ -1,4 +1,5 @@
-const User = require('../models/user')
+
+const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const bcrypt = require('bcrypt');
@@ -84,3 +85,4 @@ module.exports.get_user = (req,res) => {
         .select('-password')
         .then(user => res.json(user));
 }
+        
